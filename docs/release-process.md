@@ -19,6 +19,8 @@ npm run check
 
 ```sh
 npm ci
+npm run sync:content
+npm run sync:docs
 npm run check
 git add --all
 git commit
@@ -37,6 +39,8 @@ ssh://git@ssh.github.com:443/aoweichenn/luna-site.git
 ## 发布不变量
 
 - 未通过 `npm run check` 的源码不发布；
+- `content/luna-snapshot.json` 的提交必须与页面标示的 Luna 基线一致；
+- 中文译文与 `content/docs-zh.json` 必须同步；
 - 构建产物必须包含 `dist/server/index.js` 和
   `dist/.openai/hosting.json`；
 - GitHub 与 Sites 的 `main` 必须包含同一个提交；
