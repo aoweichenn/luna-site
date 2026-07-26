@@ -9,7 +9,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
     "lint": "tsc --noEmit",
     "check": "npm run lint && npm run build"
   },

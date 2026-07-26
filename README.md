@@ -35,6 +35,8 @@ npm run dev
 npm run check
 ```
 
+生产构建会静态导出到 `dist/`，该目录由 Sites 发布器直接接收。
+
 ## 仓库与发布
 
 站点源码使用两个远端：
