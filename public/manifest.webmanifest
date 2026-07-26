@@ -1,0 +1,16 @@
+{
+  "name": "Luna Compiler Lab",
+  "short_name": "Luna Lab",
+  "description": "Luna 系统语言与 C23 自举编译器学习站点",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090b0f",
+  "theme_color": "#d7ff3f",
+  "icons": [
+    {
+      "src": "/luna-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
