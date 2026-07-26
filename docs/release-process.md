@@ -25,12 +25,20 @@ git commit
 git push origin main
 ```
 
+`origin` 使用 SSH：
+
+```text
+ssh://git@ssh.github.com:443/aoweichenn/luna-site.git
+```
+
 随后把同一个 `HEAD` 推送到 Sites 源码远端。保存 Sites 版本时使用该远端
 `main` 分支的精确提交 SHA，保存成功后再部署这个版本。
 
 ## 发布不变量
 
 - 未通过 `npm run check` 的源码不发布；
+- 构建产物必须包含 `dist/server/index.js` 和
+  `dist/.openai/hosting.json`；
 - GitHub 与 Sites 的 `main` 必须包含同一个提交；
 - Sites 版本只能引用已经推送的提交；
 - `.openai/hosting.json` 只保存非敏感项目标识；

@@ -7,6 +7,9 @@ ELF64。
 生产站点：
 <https://luna-compiler-lab.aoweichenn.chatgpt.site>
 
+源码仓库：
+<https://github.com/aoweichenn/luna-site>
+
 ## 内容基线
 
 当前页面对应 Luna 仓库提交 `04e9522`：
@@ -29,13 +32,22 @@ npm ci
 npm run dev
 ```
 
+`npm run dev` 使用标准 Next.js 开发服务器。需要验证与 Sites 一致的运行时
+时，可以使用：
+
+```sh
+npm run dev:vinext
+```
+
 提交前运行完整本地门禁：
 
 ```sh
 npm run check
 ```
 
-生产构建会静态导出到 `dist/`，该目录由 Sites 发布器直接接收。
+生产构建使用 Sites 支持的 vinext 运行格式。门禁会生成
+`dist/server/index.js`，并把站点绑定信息复制到
+`dist/.openai/hosting.json`；两者都是发布前必须存在的产物。
 
 ## 仓库与发布
 
